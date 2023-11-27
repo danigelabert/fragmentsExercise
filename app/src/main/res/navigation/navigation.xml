@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/navigation"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.danigelabert.fragmentsexercise.HomeFragment"
+        android:label="HomeFragment" >
+        <action
+            android:id="@+id/action_homeFragment_to_fragment2"
+            app:destination="@id/fragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragment2"
+        android:name="com.danigelabert.fragmentsexercise.Fragment2"
+        android:label="Fragment2" >
+        <action
+            android:id="@+id/action_fragment2_to_fragment3"
+            app:destination="@id/fragment3"
+            app:popUpTo="@id/homeFragment"
+            app:popUpToInclusive="false" />
+        <action
+            android:id="@+id/action_fragment2_to_fragment4"
+            app:destination="@id/fragment4" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragment3"
+        android:name="com.danigelabert.fragmentsexercise.Fragment3"
+        android:label="Fragment3" >
+        <action
+            android:id="@+id/action_fragment3_to_fragment4"
+            app:destination="@id/fragment4" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragment4"
+        android:name="com.danigelabert.fragmentsexercise.Fragment4"
+        android:label="Fragment4" />
+</navigation>

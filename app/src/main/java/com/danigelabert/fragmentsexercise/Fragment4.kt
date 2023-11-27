@@ -5,20 +5,19 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.navigation.Navigation
-import androidx.navigation.Navigation.findNavController
-import androidx.navigation.fragment.findNavController
+import com.danigelabert.fragmentsexercise.databinding.Fragment2Binding
+import com.danigelabert.fragmentsexercise.databinding.Fragment4Binding
 import com.danigelabert.fragmentsexercise.databinding.FragmentHomeBinding
 
-class HomeFragment : Fragment() {
+class Fragment4 : Fragment() {
+    private lateinit var binding: Fragment4Binding
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val binding = FragmentHomeBinding.inflate(inflater)
-        binding.button3?.setOnClickListener{
-            findNavController().navigate(R.id.action_homeFragment_to_fragment2, null)
-        }
+        binding = Fragment4Binding.inflate(layoutInflater)
         return binding.root
     }
+
 }
